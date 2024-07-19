@@ -1,0 +1,12 @@
+version: '2'
+services:
+  job-db:
+    image: postgres
+    container_name: digitalmarket
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=digitalmarket
+      - POSTGRES_PASSWORD=digitalmarket
+      - POSTGRES_DB=digitalmarket
+
