@@ -1,6 +1,9 @@
 package fr.fc.digital_market.resources;
 
 import fr.fc.digital_market.entity.Business;
+import fr.fc.digital_market.entity.Cms;
+import fr.fc.digital_market.entity.Monetisation;
+import fr.fc.digital_market.entity.SourceAquisition;
 import fr.fc.digital_market.services.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -45,5 +48,17 @@ public class BusinessResource {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Business>> searchBusiness(
+            @RequestParam(required = false) List<Monetisation> monetisationList,
+            @RequestParam(required = false) Double minValue,
+            @RequestParam(required = false) Double maxValue,
+            @RequestParam(required = false) List<Cms> cmsList,
+            @RequestParam(required = false) List<SourceAquisition> sourceAquisitions) {
+        List<Business> businesses = businessService.searchBusiness(monetisationList,minValue,maxValue,cmsList,sourceAquisitions);
+        return ResponseEntity.ok().body(businesses);
+    }
+
 }
 

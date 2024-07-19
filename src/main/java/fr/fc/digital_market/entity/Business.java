@@ -31,6 +31,7 @@ public class Business {
     @Embedded
     private NumericInterval estimation;
 
+    @ElementCollection(targetClass = Monetisation.class)
     @Enumerated(EnumType.STRING)
     private List<Monetisation> monetisationList ;
 

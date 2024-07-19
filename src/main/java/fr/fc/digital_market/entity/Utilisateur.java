@@ -14,6 +14,7 @@ public class Utilisateur {
     private String userName;
     private String email;
     private String password;
+    private AbonnementType abonnementType;
     @Enumerated(EnumType.STRING)
     private UtilisateurStatus status;
 
