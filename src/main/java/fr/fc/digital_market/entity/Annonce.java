@@ -1,5 +1,7 @@
 package fr.fc.digital_market.entity;
 
+import fr.fc.digital_market.enumerations.Cms;
+import fr.fc.digital_market.enumerations.SourceAquisition;
 import jakarta.persistence.*;
 import lombok.Data;
 
