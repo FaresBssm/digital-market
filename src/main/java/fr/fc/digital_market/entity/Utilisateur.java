@@ -1,5 +1,7 @@
 package fr.fc.digital_market.entity;
 
+import fr.fc.digital_market.enumerations.AbonnementType;
+import fr.fc.digital_market.enumerations.UtilisateurStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 

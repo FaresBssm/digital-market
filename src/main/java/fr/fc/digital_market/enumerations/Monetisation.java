@@ -1,4 +1,4 @@
-package fr.fc.digital_market.entity;
+package fr.fc.digital_market.enumerations;
 
 public enum Monetisation {
     ABONNEMENT,

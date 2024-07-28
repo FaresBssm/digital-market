@@ -3,7 +3,6 @@ package fr.fc.digital_market.resources;
 
 import fr.fc.digital_market.entity.Utilisateur;
 import fr.fc.digital_market.services.UtilisateurService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,10 +10,14 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v2/utilisateur")
+@RequestMapping("/api/v1/utilisateur")
 public class UtilisateurResource {
-    @Autowired
-    private UtilisateurService utilisateurService;
+
+    private final UtilisateurService utilisateurService;
+
+    public UtilisateurResource(UtilisateurService utilisateurService) {
+        this.utilisateurService = utilisateurService;
+    }
 
     @PostMapping
     public ResponseEntity<Utilisateur> createUtilisateur(@RequestBody Utilisateur utilisateur) {

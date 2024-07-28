@@ -1,6 +1,7 @@
 package fr.fc.digital_market.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import fr.fc.digital_market.enumerations.Monetisation;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
